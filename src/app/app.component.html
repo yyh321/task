@@ -1,11 +1,11 @@
 
-<mat-sidenav-container>
+<mat-sidenav-container [class.myapp-dark-theme] = "darkTheme">
     <mat-sidenav #drawer  mode="over" opened role="navigation">
       <app-sidebar></app-sidebar>
     </mat-sidenav>
   <div class="site">
   <header>
-    <app-header (toggle)="drawer.toggle()"></app-header>
+    <app-header (toggle)="drawer.toggle()" (toggleDarkTheme)="swithTheme($event)"></app-header>
   </header>
   <main>
     <router-outlet></router-outlet>

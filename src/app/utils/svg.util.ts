@@ -5,8 +5,10 @@ export const loadSvgResources = (ir: MatIconRegistry, ds: DomSanitizer) => {
   const imgDir = 'assets/img';
   const sidebarDir = `${imgDir}/sidebar`;
   const dayDir = `${imgDir}/days`;
-  ir.addSvgIconSetInNamespace('avatars', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/project.svg`))
+  const avatarDir = `${imgDir}/avatar`;
+  ir.addSvgIconSetInNamespace('avatars', ds.bypassSecurityTrustResourceUrl(`${avatarDir}/avatars.svg`))
     .addSvgIcon('projects', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/projects.svg`))
+    .addSvgIcon('project', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/project.svg`))
     .addSvgIcon('month', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/month.svg`))
     .addSvgIcon('week', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/week.svg`))
     .addSvgIcon('day', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/day.svg`));

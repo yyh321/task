@@ -4,9 +4,10 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginRoutingModule } from './login-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     SharedModule,
     HttpClientModule,

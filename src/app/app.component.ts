@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'task';
+  darkTheme = false;
+
+  swithTheme(dark) {
+    if (dark.checked) {
+      this.darkTheme = true;
+      console.log('there: ' + this.darkTheme);
+    } else  {
+      this.darkTheme = false;
+    }
+  }
 }
